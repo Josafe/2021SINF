@@ -1,0 +1,24 @@
+#!/bin/bash
+#hello to you or now
+
+echo random
+
+name=$1
+
+if [ $name > 1 ]
+then
+        echo "You can just put 1 name"
+else
+        echo "Right, you put 1 name"
+fi
+
+if [ $name = "Manol	echo "I hate you, $name"
+else
+	echo "Hello $name, welcome!"
+f
+
+if [ $name > 1 ]
+the
+	echo "You can just put 1 name"
+else
+	echo "Right,

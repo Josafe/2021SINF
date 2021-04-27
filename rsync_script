@@ -1,0 +1,17 @@
+#!/bin/bash
+
+pen=""
+finish=1
+
+if [[ -d "/media/$USER/$pen" ]]
+then
+finish=0
+fi
+
+if [[ "/home/joafer/Escritorio/rsync" -nt "/media/$USER/$pen" ]]
+then
+echo "The file 1 has been recently changed than file 2"
+elif (( "/home/joafer/Escritorio/rsync" -ot "/media/$USER/$pen" ))
+then
+echo "The file 2 has been recently changed than file 1"
+

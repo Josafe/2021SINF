@@ -1,0 +1,33 @@
+#!/bin/bash
+num=$(($RANDOM%10))
+
+name=1
+
+cont=0
+
+while [ $num -ne $name ]
+do
+
+let cont=cont++
+
+if [ $cont -gt 5 ]
+then
+echo "You reach the total attempts, you lost the lottery!"
+exit
+
+else
+
+if
+then
+	echo "Congratulations, you got the number!!"
+	exit
+else if (("$RANDOM" < "$1" ))
+then
+	echo "The number its smaller than you write"
+	exit
+else if (("$RANDOM" > "$1" ))
+then
+	echo "The number its bigger than you write"
+	exit
+fi
+done

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+A1='/home/joafer/Escritorio/rsync'
+A2='/home/joafer/Escritorio/rsync_desti'
+
+echo $A1
+echo $A2
+
+if [[ -d $A1 ]]
+then
+echo "L'arxiu 1 existeix"
+
+else
+echo "L'arxiu 1 no existeix"
+fi
+
+if [[ -d $A2 ]]
+then
+echo "L'arxiu 2 existeix"
+
+else
+echo "L'arxiu 2 no existeix"
+fi
+
+if [[ $A1 -nt $A2 ]]
+then
+echo "L'arxiu 1 es mes recent que el 2"
+rsync -av $A1 $A2
+rsync -avh $A1 $A2 --delete
+
+else
+echo "L'arxiu 2 es mes recent que el 1"
+rsync -av $A2 $A1
+rsync -avh $A1 $A2 --delete
+fi
