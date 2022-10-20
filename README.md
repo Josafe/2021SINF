@@ -1,2 +1,2 @@
-# 2021SINF
+# BashScripts
 Computer System practice repo
